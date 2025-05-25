@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Naruto & Hinata Wedding</title>
   <link rel="icon" href="img/Konoha.ico" type="image/png">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
@@ -17,18 +18,37 @@
 
   <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
   <script src="countdown/simplyCountdown.min.js"></script>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   
   <link rel="stylesheet" href="style.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 
-<body>
+<body class="overflow-hidden">
+
+  <div id="audio-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;">
+    <audio id="song" autoplay loop>
+      <source src="audio/bluebird.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="audio-icon-wrapper" style="position: fixed; display: none; z-index: 9999; pointer-events: auto !important; background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 10px;">
+      <i class="bi bi-disc"></i>
+    </div>
+  </div>
 
   <section id="hero"
     class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+    <img src="https://i.imgur.com/ztJ5IAC.gif" alt="sparkle" class="sparkle">
     <main>
       <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
-      <h1>Naruto & Hinata</h1>
+      <h1>Naruto</h1>
+      <h1>&</h1>
+      <h1>Hinata</h1>
       <p>Akan melangsungkan resepsi pernikahan dalam:</p>
       <div class="simply-countdown"></div>
       <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
@@ -36,7 +56,7 @@
 
   </section>
 
-  <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+  <nav class="navbar navbar-expand-md bg-transparent mynavbar" style="z-index: 1000; display: none;">
     <div class="container">
       <a class="navbar-brand" href="#">Kelompok 1</a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -56,6 +76,7 @@
             <a class="nav-link" href="#gallery">Gallery</a>
             <a class="nav-link" href="#rsvp">RSVP</a>
             <a class="nav-link" href="#gifts">Gifts</a>
+            <a class="nav-link" href="#disqus_thread">Comment</a>
           </div>
         </div>
       </div>
@@ -64,17 +85,17 @@
 
   <section id="home" class="home">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
         <div class="col-md-8 text-center">
           <h2>Acara Pernikahan</h2>
-          <h3>Diselenggarakan pada 19 Mei 2025 di Blater, Purbalingga.</h3>
+          <h3>Diselenggarakan pada 26 Mei 2025 di Blater, Purbalingga.</h3>
           <p>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu, Saudara/i, untuk hadir
             pada acara pernikahan kami. </p>
         </div>
       </div>
-
+      
       <div class="row couple">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
           <div class="row">
             <div class="col-8 text-end">
               <h3>Uzumaki Naruto</h3>
@@ -83,14 +104,14 @@
               <p>Putra dari Bpk. Minato Namikaze <br> dan <br> Ibu Kushina Uzumaki</p>
             </div>
             <div class="col-4">
-              <img src="img/naruto.jpg" alt="Uzumaki Naruto" class="img-responsive rounded-circle">
+              <img src="img/naruto.jpg" alt="Uzumaki Naruto" class="img-fluid rounded-circle">
             </div>
           </div>
         </div>
 
         <span class="heart"><i class="bi bi-heart-fill"></i></span>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
           <div class="row">
             <div class="col-4">
               <img src="https://i.imgur.com/q9ruAeg.jpeg" alt="Hinata Hyuga" class="img-fluid rounded-circle">
@@ -110,7 +131,7 @@
 
   <section id="info" class="info">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
         <div class="col-md-8 col-10 text-center">
           <h2>Informasi Acara</h2>
           <p class="alamat">Alamat: Aula Gedung F 301, Fakultas Teknik <br> Jl. Raya Mayjen Sungkono KM 5, Dusun 2 Blater, Kec. Kalimanah, Kabupaten Purbalingga, Jawa Tengah</p>
@@ -128,7 +149,7 @@
       </div>
 
       <div class="row justify-content-center mt-4">
-        <div class="col-md-5 col-10">
+        <div class="col-md-5 col-10" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
           <div class="card text-center text-bg-light mb-5">
             <div class="card-header">Akad Nikah</div>
             <div class="card-body">
@@ -139,7 +160,7 @@
                 </div>
                 <div class="col-md-6">
                   <i class="bi bi-calendar3 d-block"></i>
-                  <span>Senin, 19 Mei 2025</span>
+                  <span>Senin, 26 Mei 2025</span>
                 </div>
               </div>
             </div>
@@ -148,7 +169,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-5 col-10">
+        <div class="col-md-5 col-10" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
           <div class="card text-center text-bg-light">
             <div class="card-header">Resepsi</div>
             <div class="card-body">
@@ -159,7 +180,7 @@
                 </div>
                 <div class="col-md-6">
                   <i class="bi bi-calendar3 d-block"></i>
-                  <span>Senin, 19 Mei 2025</span>
+                  <span>Senin, 26 Mei 2025</span>
                 </div>
               </div>
             </div>
@@ -172,8 +193,8 @@
     </div>
   </section>
 
-  <section id="story" class="story">
-    <div class="container">
+  <section id="story" class="story" style="position: relative; z-index: 1;">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
       <div class="row justify-content-center">
         <div class="col-md-8 col-10 text-center">
           <span>Bagaimana Cinta Kami Bersemi</span>
@@ -194,18 +215,18 @@
                   <span>31 Februari 1945</span>
                 </div>
                 <div class="timeline-body">
-                  Bertemu pertama kali di Akademi.
+                  Bertemu pertama kali di Akademi Ninja.
                   Saat itu masih canggung, tapi jadi awal dari segalanya.
                 </div>
               </div>
 
             </li>
-            <li class="timeline-inverted">
+            <li class="timeline-inverted" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
               <div class="timeline-image" style="background-image: url(https://i.imgur.com/XanccK9.jpeg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h3>Mulai Serius</h3>
-                  <span>17 Mei 2025</span>
+                  <span>24 Mei 2025</span>
                 </div>
                 <div class="timeline-body">
                   Di tengah pertempuran, kami saling memahami.
@@ -214,12 +235,12 @@
               </div>
 
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
               <div class="timeline-image" style="background-image: url(https://i.imgur.com/cWS3WJE.jpeg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h3>Tunangan</h3>
-                  <span>18 Mei 2025</span>
+                  <span>25 Mei 2025</span>
                 </div>
                 <div class="timeline-body">
                   Setelah banyak hal dilewati,
@@ -235,7 +256,7 @@
 
   <section id="gallery" class="gallery">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
         <div class="col-md-8 col-10 text-center">
           <span>Memori Kisah Kami</span>
           <h2>Galeri Foto</h2>
@@ -244,40 +265,40 @@
       </div>
 
       <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
-        <div class="col mt-3">
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
           <a href="https://i.imgur.com/pPFLJtU.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 1"
             data-gallery="mygallery">
-            <img src="https://i.imgur.com/pPFLJtU.jpeg" alt="Naruto & Hinata 1" class="img-fluid w-100 rounded">
+            <img src="https://i.imgur.com/pPFLJtU.jpeg" alt="Naruto & Hinata 1" class="img-fluid w-100 rounded gallery-img">
           </a>
         </div>
-        <div class="col mt-3">
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
           <a href="https://i.imgur.com/mO2Xemf.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 2"
             data-gallery="mygallery">
-            <img src="https://i.imgur.com/mO2Xemf.jpeg" alt="Naruto & Hinata 2" class="img-fluid w-100 rounded">
+            <img src="https://i.imgur.com/mO2Xemf.jpeg" alt="Naruto & Hinata 2" class="img-fluid w-100 rounded gallery-img">
           </a>
         </div>
-        <div class="col mt-3">
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
           <a href="https://i.imgur.com/njnRbnK.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 3"
             data-gallery="mygallery">
-            <img src="https://i.imgur.com/njnRbnK.jpeg" alt="Naruto & Hinata 3" class="img-fluid w-100 rounded">
+            <img src="https://i.imgur.com/njnRbnK.jpeg" alt="Naruto & Hinata 3" class="img-fluid w-100 rounded gallery-img">
           </a>
         </div>
-        <div class="col mt-3">
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
           <a href="https://i.imgur.com/alCg8mM.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 4"
             data-gallery="mygallery">
-            <img src="https://i.imgur.com/alCg8mM.jpeg" alt="Naruto & Hinata 4" class="img-fluid w-100 rounded">
+            <img src="https://i.imgur.com/alCg8mM.jpeg" alt="Naruto & Hinata 4" class="img-fluid w-100 rounded gallery-img">
           </a>
         </div>
-        <div class="col mt-3">
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
           <a href="https://i.imgur.com/D89ogMb.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 5"
             data-gallery="mygallery">
-            <img src="https://i.imgur.com/D89ogMb.jpeg" alt="Naruto & Hinata 5" class="img-fluid w-100 rounded">
+            <img src="https://i.imgur.com/D89ogMb.jpeg" alt="Naruto & Hinata 5" class="img-fluid w-100 rounded gallery-img">
           </a>
         </div>
-        <div class="col mt-3">
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
           <a href="https://i.imgur.com/kQ7fhzL.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 6"
             data-gallery="mygallery">
-            <img src="https://i.imgur.com/kQ7fhzL.jpeg" alt="Naruto & Hinata 6" class="img-fluid w-100 rounded">
+            <img src="https://i.imgur.com/kQ7fhzL.jpeg" alt="Naruto & Hinata 6" class="img-fluid w-100 rounded gallery-img">
           </a>
         </div>
       </div>
@@ -286,7 +307,7 @@
 
   <section id="rsvp" class="rsvp">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
         <div class="col-md-8 col-10 text-center">
           <h2>Konfirmasi Kehadiran</h2>
           <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
@@ -323,14 +344,38 @@
         </div>
       </form>
 
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <div id="disqus_thread"></div>
+          <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+            var disqus_config = function () {
+              this.page.url = 'https://sandhikagalih.me';  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = 'https://sandhikagalih.me'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function () { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://dino-wedding-1.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+              Disqus.</a></noscript>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="gifts" class="gifts">
-    <div class="container">
+  <section id="gifts" class="gifts" style="position: relative; z-index: 1;">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
       <div class="row justify-content-center">
         <div class="col-md-8 col-10 text-center">
-          <span>ungkapan tanda kasih</span>
+          <span>Ungkapan tanda kasih</span>
           <h2>Kirim Hadiah</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iure perferendis provident ab aliquam nemo.
           </p>
@@ -357,6 +402,7 @@
       </div>
     </div>
   </section>
+
 
   <footer>
     <div class="container">
@@ -385,17 +431,33 @@
       </div>
     </div>
   </footer>
+  
+  <audio id="sound_door" class="sound_door">
+    <source src="audio/door.mp3" type="audio/mpeg">
+  </audio>
 
-  <div id="audio-container">
-    <audio id="song" autoplay loop>
-      <source src="audio/bluebird.mp3" type="audio/mp3">
-    </audio>
-
-    <div class="audio-icon-wrapper" style="display: none;">
-      <i class="bi bi-disc"></i>
+  <div id="door-section" class="open" onclick="mulai()">
+    <h1 class="heading-door left huruf-sambung">Naruto</h1>
+    <h1 class="heading-door right huruf-sambung">Hinata</h1>
+    <div class="doors">
+      <div class="door left">
+        <img src="img/door-left.png" alt="left door">
+      </div>
+      <div class="door right">
+        <img src="img/door-right.png" alt="right door">
+      </div>
     </div>
   </div>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -407,8 +469,8 @@
     simplyCountdown('.simply-countdown', {
       year: 2025,
       month: 5,
-      day: 19,
-      hours: 7,
+      day: 26,
+      hours: 8,
       words: {
         days: { singular: 'hari', plural: 'hari' },
         hours: { singular: 'jam', plural: 'jam' },
@@ -419,17 +481,23 @@
   </script>
 
   <script>
-    const stickyTop = document.querySelector('.sticky-top');
-    const offcanvas = document.querySelector('.offcanvas');
-
-    offcanvas.addEventListener('show.bs.offcanvas', function () {
-      stickyTop.style.overflow = 'visible';
+    const navbar = document.querySelector('.mynavbar');
+    const hero = document.querySelector('#hero');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > hero.offsetHeight) {
+            navbar.classList.add('fixed-top');
+        } else {
+            navbar.classList.remove('fixed-top');
+        }
     });
 
-    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-      stickyTop.style.overflow = 'hidden';
-    });
-
+    function enableScroll() {
+      window.onscroll = function () { }
+      rootElement.style.scrollBehavior = 'smooth';
+      playAudio();
+      document.querySelector('.mynavbar').style.display = 'block';
+    }
   </script>
 
   <script>
@@ -450,14 +518,8 @@
       rootElement.style.scrollBehavior = 'auto';
     }
 
-    function enableScroll() {
-      window.onscroll = function () { }
-      rootElement.style.scrollBehavior = 'smooth';
-      playAudio();
-    }
-
     function playAudio() {
-      song.volume = 0.1;
+      song.volume = 1;
       audioIconWrapper.style.display = 'flex';
       song.play();
       isPlaying = true;
@@ -479,6 +541,7 @@
 
     disableScroll();
   </script>
+  
   <script>
     window.addEventListener("load", function () {
       const form = document.getElementById('my-form');
@@ -495,8 +558,8 @@
           })
       });
     });
-
   </script>
+
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const nama = urlParams.get('n') || '';
@@ -506,5 +569,36 @@
 
     document.querySelector('#nama').value = nama;
   </script>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script>
+    function mulai() {
+      window.scrollTo(0, 0);
+      
+      var soundDoor = document.querySelector('.sound_door');
+      soundDoor.play();
+
+      var doorSection = $('#door-section');
+      var doors = document.querySelectorAll('.door');
+
+      doors.forEach((door, index) => {
+        var direction = (index === 0) ? -1 : 1;
+        door.style.transform = `rotateY(${70 * direction}deg)`;
+      });
+    
+      setTimeout(function () {
+        doorSection.css('transform', 'scale(6)');
+      }, 600);
+
+      setTimeout(function () {
+        doorSection.css('opacity', '0');
+        $('body').removeClass('overflow-hidden');
+        $('body').addClass('transition');
+        doorSection.css('display', 'none');
+      }, 2000);
+    }
+  </script>
+
 </body>
 </html>
