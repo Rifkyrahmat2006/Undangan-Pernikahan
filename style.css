@@ -1,7 +1,7 @@
 :root {
   --pink: #f14e95;
   --pink-muted: #fdf4f8;
-  --pink-hover: #d84686;
+  --pink-hover: #d94585;
   --white: #fff;
   --grey: #ccc;
   --light-grey: #d4d4d4;
@@ -486,6 +486,7 @@ body.transition {
   background-color: white;
   color: var(--pink);
   border: 1px solid white;
+  scale: 1.1;
 }
 
 footer {
@@ -771,4 +772,20 @@ footer a:hover {
 .gallery .col {
   overflow: hidden;
   border-radius: 8px;
+}
+
+.copy-btn {
+  color: var(--white);
+  background-color: var(--pink);
+  box-shadow: var(--shadow);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: var(--pink-hover);
+  color: white;
+  scale: 1.1;
 }
