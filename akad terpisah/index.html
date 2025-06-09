@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>Naruto & Hinata Wedding</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/Konoha.ico" type="image/png">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Countdown -->
+  <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+  <script src="countdown/simplyCountdown.min.js"></script>
+
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Komentar -->
+  <link rel="stylesheet" href="komentar.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- Pintu -->
+  <link rel="stylesheet" href="pintu.css">
+
+</head>
+
+
+<body class="overflow-hidden">
+
+  <!-- Backsound -->
+  <div id="audio-container"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;">
+    <audio id="song" autoplay loop>
+      <source src="audio/bluebird.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Audio Icon -->
+    <div class="audio-icon-wrapper"
+      style="position: fixed; display: none; z-index: 9999; pointer-events: auto !important; background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 10px;">
+      <i class="bi bi-disc"></i>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero"
+    class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+    <img src="https://i.imgur.com/ztJ5IAC.gif" alt="sparkle" class="sparkle">
+    <main>
+      <h4>Kepada <span>Bapak/Ibu/Saudara/i, Muhammad Ihsan Fawzi, S.Kom., M.Kom.</span></h4>
+      <h1>Naruto</h1>
+      <h1>&</h1>
+      <h1>Hinata</h1>
+      <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+      <div class="simply-countdown"></div>
+      <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
+    </main>
+  </section>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-transparent mynavbar" style="z-index: 1000; display: none;">
+    <div class="container">
+      <a class="navbar-brand" href="#">Kelompok 1</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Kelompok 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#info">Info</a>
+            <a class="nav-link" href="#story">Story</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#rsvp">RSVP</a>
+            <a class="nav-link" href="#gifts">Gifts</a>
+            <a class="nav-link" href="#comments">Comment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-md-8 text-center">
+          <h2>Acara Pernikahan</h2>
+          <h3>Diselenggarakan pada 10 Juni 2026 di Blater, Purbalingga.</h3>
+          <p>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu, Saudara/i, untuk hadir
+            pada acara pernikahan kami. </p>
+        </div>
+      </div>
+
+      <div class="row couple">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="row">
+            <div class="col-8 text-end">
+              <h3>Uzumaki Naruto</h3>
+              <p>Putra dari Bpk. Minato Namikaze <br> dan <br> Ibu Kushina Uzumaki</p>
+            </div>
+            <div class="col-4">
+              <img src="img/naruto.jpg" alt="Uzumaki Naruto" class="img-fluid rounded-circle">
+            </div>
+          </div>
+        </div>
+
+        <span class="heart"><i class="bi bi-heart-fill"></i></span>
+
+        <div class="col-lg-6" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="row">
+            <div class="col-4">
+              <img src="https://i.imgur.com/q9ruAeg.jpeg" alt="Hinata Hyuga" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-8">
+              <h3>Hinata Hyuga</h3>
+              <p>Putra dari Bpk. Hiashi Hyuga <br> dan <br> Ibu Hiashi Hyuga</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Info Section -->
+  <section id="info" class="info">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-md-8 col-10 text-center">
+          <h2>Informasi Akad Nikah</h2>
+          <p class="alamat">Alamat: Aula Gedung F 301, Fakultas Teknik <br> Jl. Raya Mayjen Sungkono KM 5, Dusun 2
+            Blater, Kec. Kalimanah, Kabupaten Purbalingga, Jawa Tengah</p>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d792.4454858920982!2d109.33709389417855!3d-7.429658609567293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6559f4d10d375f%3A0x57deaed7adab4ca8!2sGedung%20Pendidikan%20Fakultas%20Teknik%20Unsoed!5e1!3m2!1sid!2sid!4v1747558096982!5m2!1sid!2sid"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <a href="https://maps.app.goo.gl/6er834BGUacw75KH6" target="_blank" class="btn btn-light btn-sm my-3">Klik
+            untuk
+            membuka peta</a>
+          <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak
+            ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi Anda salah jadwal, atau salah tempat.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-5 col-10" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="card text-center text-bg-light mb-5">
+            <div class="card-header">Akad Nikah</div>
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <i class="bi bi-clock d-block"></i>
+                  <span>07.00 - Selesai</span>
+                </div>
+                <div class="col-md-6">
+                  <i class="bi bi-calendar3 d-block"></i>
+                  <span>Rabu, 10 Juni 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan dan kekhusyuan seluruh prosesi.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-md-8 col-10 text-center">
+          <h2>Informasi Resepsi</h2>
+          <p class="alamat">Alamat: Auditorium Graha Widyatama Prof Rubijanto Misman Unsoed 
+            <br> Jl. Profesor DR. HR Boenyamin No.708, Sumampir Wetan, Pabuaran, Kec. Purwokerto Utara, Kabupaten Banyumas
+          </p>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1131.2834249604882!2d109.24513499337107!3d-7.401685559111648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655efac390f311%3A0x965886172572b2bc!2sGraha%20Widyatama%20Unsoed!5e1!3m2!1sen!2sid!4v1749486415163!5m2!1sen!2sid"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <a href="https://maps.app.goo.gl/DuRZYLCT85HKKSMN7" target="_blank" class="btn btn-light btn-sm my-3">Klik
+            untuk
+            membuka peta</a>
+          <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak
+            ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi Anda salah jadwal, atau salah tempat.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-5 col-10" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="card text-center text-bg-light">
+            <div class="card-header">Resepsi</div>
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <i class="bi bi-clock d-block"></i>
+                  <span>18.30 - selesai</span>
+                </div>
+                <div class="col-md-6">
+                  <i class="bi bi-calendar3 d-block"></i>
+                  <span>Rabu, 10 Juni 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan dan kekhusyuan seluruh prosesi.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section id="story" class="story" style="position: relative; z-index: 1;">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center">
+          <span>Bagaimana Cinta Kami Bersemi</span>
+          <h2>Cerita Kami</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, similique non soluta nulla asperiores
+            voluptatem.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image" style="background-image: url(https://i.imgur.com/QzmEBh2.jpeg);"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Pertama Bertemu</h3>
+                  <span>17 Agustus 1945</span>
+                </div>
+                <div class="timeline-body">
+                  Bertemu pertama kali di Akademi Ninja.
+                  Saat itu masih canggung, tapi jadi awal dari segalanya.
+                </div>
+              </div>
+
+            </li>
+            <li class="timeline-inverted" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+              <div class="timeline-image" style="background-image: url(https://i.imgur.com/XanccK9.jpeg);"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Mulai Serius</h3>
+                  <span>24 Mei 2026</span>
+                </div>
+                <div class="timeline-body">
+                  Di tengah pertempuran, kami saling memahami.
+                  Bukan sekadar teman—kami ingin melangkah bersama.
+                </div>
+              </div>
+
+            </li>
+            <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+              <div class="timeline-image" style="background-image: url(https://i.imgur.com/cWS3WJE.jpeg);"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Tunangan</h3>
+                  <span>25 Mei 2026</span>
+                </div>
+                <div class="timeline-body">
+                  Setelah banyak hal dilewati,
+                  kami sepakat untuk menyatu dalam satu keluarga: Uzumaki.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-md-8 col-10 text-center">
+          <span>Memori Kisah Kami</span>
+          <h2>Galeri Foto</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, itaque?</p>
+        </div>
+      </div>
+
+      <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+          <a href="https://i.imgur.com/pPFLJtU.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 1"
+            data-gallery="mygallery">
+            <img src="https://i.imgur.com/pPFLJtU.jpeg" alt="Naruto & Hinata 1"
+              class="img-fluid w-100 rounded gallery-img">
+          </a>
+        </div>
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+          <a href="https://i.imgur.com/mO2Xemf.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 2"
+            data-gallery="mygallery">
+            <img src="https://i.imgur.com/mO2Xemf.jpeg" alt="Naruto & Hinata 2"
+              class="img-fluid w-100 rounded gallery-img">
+          </a>
+        </div>
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+          <a href="https://i.imgur.com/njnRbnK.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 3"
+            data-gallery="mygallery">
+            <img src="https://i.imgur.com/njnRbnK.jpeg" alt="Naruto & Hinata 3"
+              class="img-fluid w-100 rounded gallery-img">
+          </a>
+        </div>
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+          <a href="https://i.imgur.com/alCg8mM.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 4"
+            data-gallery="mygallery">
+            <img src="https://i.imgur.com/alCg8mM.jpeg" alt="Naruto & Hinata 4"
+              class="img-fluid w-100 rounded gallery-img">
+          </a>
+        </div>
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+          <a href="https://i.imgur.com/D89ogMb.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 5"
+            data-gallery="mygallery">
+            <img src="https://i.imgur.com/D89ogMb.jpeg" alt="Naruto & Hinata 5"
+              class="img-fluid w-100 rounded gallery-img">
+          </a>
+        </div>
+        <div class="col mt-3" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+          <a href="https://i.imgur.com/kQ7fhzL.jpeg" data-toggle="lightbox" data-caption="Naruto & Hinata 6"
+            data-gallery="mygallery">
+            <img src="https://i.imgur.com/kQ7fhzL.jpeg" alt="Naruto & Hinata 6"
+              class="img-fluid w-100 rounded gallery-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Section -->
+  <section id="rsvp" class="rsvp">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-md-8 col-10 text-center">
+          <h2>Konfirmasi Kehadiran</h2>
+          <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
+        </div>
+      </div>
+
+      <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST"
+        action="https://script.google.com/macros/s/AKfycbyddFbEJRqwEeA6OmZAuNf0jw_B30ZUOS5qSDwlAKV_nurcW7H6osJx2ZWnIeTmPm_35g/exec"
+        id="my-form">
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" name="nama">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="jumlah" class="form-label">Jumlah</label>
+            <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="5" length="1" value="1">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="status" class="form-label">Konfirmasi</label>
+            <select name="status" id="status" class="form-select">
+              <option selected>Pilih salah satu</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12" style="margin-top: 35px;">
+          <button class="btn btn-primary">Kirim</button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- Gifts Section -->
+  <section id="gifts" class="gifts" style="position: relative; z-index: 1;">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center">
+          <span>Ungkapan tanda kasih</span>
+          <h2>Kirim Hadiah</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iure perferendis provident ab aliquam nemo.
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="fw-bold">BCA</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>123456789 - UZUMAKI NARUTO</span>
+                <button class="btn btn-sm copy-btn" onclick="copyToClipboard('123456789')">Salin</button>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="fw-bold">MANDIRI</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>987654321 - UZUMAKI NARUTO</span>
+                <button class="btn btn-sm copy-btn" onclick="copyToClipboard('987654321')">Salin</button>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="fw-bold">QRIS</div>
+              <div class="d-flex justify-content-center">
+                <img src='https://storage2.me-qr.com/qr/207274316.png' alt='QRIS' class="img-thumbnail" width="150">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment Section -->
+  <section id="comments" class="comments">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center" data-aos="fade-down" data-aos-delay="200">
+          <h2>Kirim Ucapan</h2>
+        </div>
+        <div class="col-md-8" data-aos="zoom-in" data-aos-delay="400">
+          <div class="card-body">
+            <div class="d-flex gap-3 mb-4">
+              <img src="https://placehold.co/40x40/cbd5e1/4a5568?text=U" alt="User Avatar" class="rounded-circle"
+                width="40" height="40">
+
+              <div class="flex-grow-1">
+                <p class="text-muted small mb-2">Komentar sebagai:</p>
+                <input type="text" id="usernameInput" placeholder="Nama Anda (opsional)" class="form-control mb-3">
+
+                <textarea id="commentInput" rows="4" placeholder="Tulis komentar Anda di sini..."
+                  class="form-control mb-3"></textarea>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <button id="publishButton" class="btn" style="background-color: #d94585; color: white; border: none;">
+                    Publikasikan
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div id="commentsDisplayArea" class="border-top pt-4" style="max-height: 400px; overflow-y: auto;">
+              <p id="noCommentsMessage" class="text-muted text-center py-4">Belum ada komentar. Jadilah yang pertama
+                berkomentar!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <small class="block">&copy; 2025 Kelompok 1. All Rights Reserved.</small>
+          <div class="footer-ig text-center">
+            <span class="d-block mb-2">Design by</span>
+            <ul class="list-unstyled">
+              <li><a href="https://instagram.com/rifky.prakoso_">@rifky.prakoso_</a></li>
+              <li><a href="https://instagram.com/satriamegantaraaa">@satriamegantaraaa</a></li>
+              <li><a href="https://instagram.com/alfarizzqy_">@alfarizzqy_</a></li>
+              <li><a href="https://instagram.com/dz_habibi05">@dz_habibi05</a></li>
+            </ul>
+          </div>
+
+          <ul class="mt-3 d-flex justify-content-center list-unstyled">
+            <li class="mx-2"><a href="#"><i class="bi bi-instagram"></i></a></li>
+            <li class="mx-2"><a href="#"><i class="bi bi-youtube"></i></a></li>
+            <li class="mx-2"><a href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="mx-2"><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li class="mx-2"><a href="#"><i class="bi bi-tiktok"></i></a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sound Door -->
+  <audio id="sound_door" class="sound_door">
+    <source src="audio/door.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Door Section -->
+  <div id="door-section" class="open" onclick="mulai()">
+    <h1 class="heading-door left huruf-sambung">Naruto</h1>
+    <h1 class="heading-door right huruf-sambung">Hinata</h1>
+    <div class="doors">
+      <div class="door left">
+        <img src="img/door-left.png" alt="left door">
+      </div>
+      <div class="door right">
+        <img src="img/door-right.png" alt="right door">
+      </div>
+    </div>
+  </div>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  </script>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <!-- Lightbox -->
+  <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+  <!-- Countdown -->
+  <script>
+    simplyCountdown('.simply-countdown', {
+      year: 2026,
+      month: 6,
+      day: 10,
+      hours: 18,
+      words: {
+        days: { singular: 'hari', plural: 'hari' },
+        hours: { singular: 'jam', plural: 'jam' },
+        minutes: { singular: 'menit', plural: 'menit' },
+        seconds: { singular: 'detik', plural: 'detik' }
+      },
+    });
+  </script>
+
+  <!-- Navbar -->
+  <script>
+    const navbar = document.querySelector('.mynavbar');
+    const hero = document.querySelector('#hero');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > hero.offsetHeight) {
+        navbar.classList.add('fixed-top');
+      } else {
+        navbar.classList.remove('fixed-top');
+      }
+    });
+
+    function enableScroll() {
+      window.onscroll = function () { }
+      rootElement.style.scrollBehavior = 'smooth';
+      playAudio();
+      document.querySelector('.mynavbar').style.display = 'block';
+    }
+  </script>
+
+  <!-- Audio -->
+  <script>
+    const rootElement = document.querySelector(":root");
+    const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+    const audioIcon = document.querySelector('.audio-icon-wrapper i');
+    const song = document.querySelector('#song');
+    let isPlaying = false;
+
+    function disableScroll() {
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+      window.onscroll = function () {
+        window.scrollTo(scrollTop, scrollLeft);
+      }
+
+      rootElement.style.scrollBehavior = 'auto';
+    }
+
+    function playAudio() {
+      song.volume = 1;
+      audioIconWrapper.style.display = 'flex';
+      song.play();
+      isPlaying = true;
+    }
+
+    audioIconWrapper.onclick = function () {
+      if (isPlaying) {
+        song.pause();
+        audioIcon.classList.remove('bi-disc');
+        audioIcon.classList.add('bi-pause-circle');
+      } else {
+        song.play();
+        audioIcon.classList.add('bi-disc');
+        audioIcon.classList.remove('bi-pause-circle');
+      }
+
+      isPlaying = !isPlaying;
+    }
+
+    disableScroll();
+  </script>
+
+  <!-- RSVP -->
+  <script>
+    window.addEventListener("load", function () {
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+          .then(() => {
+            alert("Konfirmasi kehadiran berhasil terkirim!");
+          })
+      });
+    });
+  </script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- Sound Door -->
+  <script>
+    function mulai() {
+      window.scrollTo(0, 0);
+
+      var soundDoor = document.querySelector('.sound_door');
+      soundDoor.play();
+
+      var doorSection = $('#door-section');
+      var doors = document.querySelectorAll('.door');
+
+      doors.forEach((door, index) => {
+        var direction = (index === 0) ? -1 : 1;
+        door.style.transform = `rotateY(${70 * direction}deg)`;
+      });
+
+      setTimeout(function () {
+        doorSection.css('transform', 'scale(6)');
+      }, 600);
+
+      setTimeout(function () {
+        doorSection.css('opacity', '0');
+        $('body').removeClass('overflow-hidden');
+        $('body').addClass('transition');
+        doorSection.css('display', 'none');
+      }, 2000);
+    }
+  </script>
+
+  <!-- Copy -->
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Nomor rekening berhasil disalin!');
+      }).catch(err => {
+        console.error('Gagal menyalin: ', err);
+      });
+    }
+  </script>
+
+  <!-- Komentar -->
+  <script>
+    // Mendapatkan referensi ke elemen DOM
+    const usernameInput = document.getElementById('usernameInput');
+    const commentInput = document.getElementById('commentInput');
+    const publishButton = document.getElementById('publishButton');
+    const commentsDisplayArea = document.getElementById('commentsDisplayArea');
+    const noCommentsMessage = document.getElementById('noCommentsMessage');
+
+    // Fungsi untuk mengaktifkan/menonaktifkan tombol publikasi
+    function togglePublishButton() {
+      if (commentInput.value.trim() !== '') {
+        publishButton.removeAttribute('disabled');
+        publishButton.classList.remove('opacity-50', 'cursor-not-allowed');
+      } else {
+        publishButton.setAttribute('disabled', 'true');
+        publishButton.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+    }
+
+    // Fungsi untuk menambahkan komentar baru
+    function addPost() {
+      const commentText = commentInput.value.trim();
+      if (commentText === '') {
+        return; // Jangan lakukan apa-apa jika komentar kosong
+      }
+
+      let username = usernameInput.value.trim();
+      const isAnonymous = username === '' || username.toLowerCase() === 'anonymous';
+
+      // Atur nama pengguna dan gambar berdasarkan apakah anonim atau tidak
+      let displayUsername = isAnonymous ? 'Anonim' : username;
+      let userImageSrc = isAnonymous ? 'https://placehold.co/40x40/e2e8f0/4a5568?text=A' : 'https://placehold.co/40x40/cbd5e1/4a5568?text=U';
+
+      const now = new Date();
+      const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      const commentDate = now.toLocaleDateString('id-ID', options);
+
+      // Buat elemen komentar baru
+      const newCommentHtml = `
+        <div class="comment-item d-flex gap-3 py-3 border-bottom">
+          <img src="${userImageSrc}" alt="${displayUsername} Avatar" class="rounded-circle" width="40" height="40">
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center">
+              <h6 class="mb-0 fw-semibold">${displayUsername}</h6>
+              <small class="text-muted">${commentDate}</small>
+            </div>
+            <p class="mb-2">${commentText}</p>
+            <div class="d-flex gap-3">
+              <button class="btn btn-link like-button" onclick="toggleLike(this)">
+                <i class="bi bi-heart"></i> <span class="like-count">0</span>
+              </button>
+              <button class="btn btn-link btn-sm text-muted p-0">
+                <i class="bi bi-share me-1"></i>
+                Bagikan
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Hapus pesan "Belum ada komentar" jika ada
+      if (noCommentsMessage) {
+        noCommentsMessage.remove();
+      }
+
+      // Tambahkan komentar ke area tampilan
+      commentsDisplayArea.insertAdjacentHTML('beforeend', newCommentHtml);
+
+      // Bersihkan input setelah memposting
+      commentInput.value = '';
+      usernameInput.value = ''; // Bersihkan juga input nama pengguna
+      togglePublishButton(); // Nonaktifkan tombol setelah posting
+    }
+
+    // Event listener untuk input komentar (mengaktifkan/menonaktifkan tombol)
+    commentInput.addEventListener('input', togglePublishButton);
+
+    // Event listener untuk tombol publikasi
+    publishButton.addEventListener('click', addPost);
+
+    // Panggil togglePublishButton saat halaman dimuat untuk mengatur status awal tombol
+    document.addEventListener('DOMContentLoaded', togglePublishButton);
+  </script>
+
+  <script>
+    function toggleLike(button) {
+      const likeCount = button.querySelector('.like-count');
+      const currentCount = parseInt(likeCount.textContent);
+      
+      if (button.classList.contains('liked')) {
+        button.classList.remove('liked');
+        likeCount.textContent = currentCount - 1;
+      } else {
+        button.classList.add('liked');
+        likeCount.textContent = currentCount + 1;
+        button.classList.add('animate__animated', 'animate__heartBeat');
+        setTimeout(() => {
+          button.classList.remove('animate__animated', 'animate__heartBeat');
+        }, 1000);
+      }
+    }
+  </script>
+</body>
+
+</html>
