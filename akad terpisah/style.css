@@ -155,6 +155,11 @@ body.transition {
 
 .mynavbar .nav-link {
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.mynavbar .nav-link:hover {
+  color: var(--pink) !important;
 }
 
 .home {
@@ -162,7 +167,7 @@ body.transition {
   background-size: cover;
   min-height: 100vh;
   margin-top: 0;
-  padding-top: 5rem;
+  padding-top: 8rem;
   padding-bottom: 5rem;
 }
 
