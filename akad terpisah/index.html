@@ -767,7 +767,7 @@
               <button class="btn btn-link like-button" onclick="toggleLike(this)">
                 <i class="bi bi-heart"></i> <span class="like-count">0</span>
               </button>
-              <button class="btn btn-link btn-sm text-muted p-0">
+              <button class="btn btn-link btn-sm text-muted p-0" onclick="shareContent()">
                 <i class="bi bi-share me-1"></i>
                 Bagikan
               </button>
@@ -810,6 +810,26 @@
         setTimeout(() => {
           button.classList.remove('animate__animated', 'animate__heartBeat');
         }, 1000);
+      }
+    }
+  </script>
+
+  <!-- Share Function -->
+  <script>
+    function shareContent() {
+      const shareData = {
+        title: 'Undangan Pernikahan Naruto & Hinata',
+        text: 'Mari hadiri pernikahan Naruto & Hinata pada 10 Juni 2026',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData)
+          .catch((error) => console.log('Error sharing:', error));
+      } else {
+        // Fallback for browsers that don't support Web Share API
+        const shareUrl = `https://wa.me/?text=${encodeURIComponent(shareData.text + ' ' + shareData.url)}`;
+        window.open(shareUrl, '_blank');
       }
     }
   </script>
